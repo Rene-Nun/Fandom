@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset mínimo y base global */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-gray-900;
+  }
+}
+
+/* Aquí irán tus estilos globales personalizados de Fandoom */
