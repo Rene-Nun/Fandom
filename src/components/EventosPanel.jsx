@@ -926,4 +926,11 @@ function CopyButton({ text, label }) {
         fontSize: 10,
         letterSpacing: '0.08em',
         textTransform: 'uppercase',
-        border: '1
+        border: '1px solid var(--ink)',
+        cursor: 'pointer',
+      }}
+    >
+      {copied ? '✓ Copiada' : label}
+    </button>
+  );
+}
