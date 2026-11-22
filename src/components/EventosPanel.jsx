@@ -1,9 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useApp } from '../context/AppProvider.jsx';
-import { openLegal } from './_shared'; // helper abajo
-
-// ⚠️ Nota: para evitar dependencias circulares, recibe openLegal vía contexto
-// en lugar de import directo. Reemplaza la línea anterior si prefieres.
 
 export default function EventosPanel({ evento, onClose }) {
   const { isLoggedIn, openAuth } = useApp();
