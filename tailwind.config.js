@@ -1,18 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    './index.html',
-    './src/**/*.{js,jsx,ts,tsx}',
-  ],
+  content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
-      colors: {
-        // Aquí luego podrás pegar tu paleta de Fandoom
-        // fandoom: { primary: '#...', ... }
-      },
       fontFamily: {
-        // Aquí luego podrás pegar tus fuentes
-        // sans: ['Inter', 'sans-serif'],
+        sans: ['Manrope', 'system-ui', 'sans-serif'],
+        display: ['"Space Grotesk"', 'sans-serif'],
+        mono: ['"Space Mono"', 'monospace'],
+      },
+      colors: {
+        ink: '#0a0a0a',
+        paper: '#ffffff',
+        muted: '#6b6b6b',
       },
     },
   },
