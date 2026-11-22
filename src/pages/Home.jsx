@@ -1,10 +1,37 @@
+import { useState } from 'react';
+import Navbar from '../components/Navbar.jsx';
+import EventCard from '../components/EventCard.jsx';
+import EventosPanel from '../components/EventosPanel.jsx';
+import { EVENTOS } from '../data/eventos.js';
+
 export default function Home() {
+  const [eventoActivo, setEventoActivo] = useState(null);
+
   return (
-    <div className="min-h-screen bg-gray-50 p-8">
-      <h1 className="text-3xl font-bold text-gray-900">Fandoom — Home</h1>
-      <p className="mt-2 text-gray-600">
-        Placeholder. Reemplazar en Fase 3 con el contenido de index.html.
-      </p>
-    </div>
+    <>
+      <Navbar />
+
+      <div className="intro-strip">
+        <div className="intro-label">Eventos disponibles</div>
+      </div>
+
+      <main className="app-main">
+        <div className="boletos-grid">
+          {EVENTOS.map((ev, i) => (
+            <EventCard
+              key={ev.id}
+              evento={ev}
+              index={i}
+              onClick={() => setEventoActivo(ev)}
+            />
+          ))}
+        </div>
+      </main>
+
+      <EventosPanel
+        evento={eventoActivo}
+        onClose={() => setEventoActivo(null)}
+      />
+    </>
   );
 }
